@@ -1,0 +1,31 @@
+social_pro_homepage:
+    path:     /
+    defaults: { _controller: SocialProBundle:Default:index }
+social_pro_newsfeed:
+    path:     /newsfeed
+    defaults: { _controller: SocialProBundle:Default:newsfeed }
+admin_home:
+    path:     /admin
+    defaults: { _controller: SocialProBundle:Default:admin }
+admin_show_userlist:
+    path:     /admin/userlist
+    defaults: { _controller: SocialProBundle:Admin:showUsers }
+
+user_tasks:
+    resource: "@SocialProBundle/Resources/config/routing/tasks.yml"
+    prefix:   /admin/tasks
+user_teams:
+    resource: "@SocialProBundle/Resources/config/routing/teams.yml"
+    prefix:   /admin/teams
+fronttasks:
+    path:     /fronttasks
+    defaults: { _controller: "SocialProBundle:Tasks:front" }
+frontteams:
+    path:     /frontteams
+    defaults: { _controller: "SocialProBundle:Teams:front" }
+membreteams:
+    path:     /{id}/membreteams
+    defaults: { _controller: "SocialProBundle:Teams:membreteams" }
+pie:
+    path:     /admin/pie
+    defaults: { _controller: "SocialProBundle:Graphe:Pie" }
